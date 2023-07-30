@@ -6,13 +6,14 @@ import matplotlib.pyplot as plt
 from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 
-k = []
-for i in wp.areacount.keys():
-    k.append(i)
+
 #g = wp.top10cities[:5]
 """
 for i in g:
     print(wp.create_crime_graph(str(i)))
 
 """
-print(wp.create_crime_graph("West LA"))
+
+
+slay = input("Please input the county you wish you obtain a crime graph for? ")
+print(wp.create_crime_graph(slay))

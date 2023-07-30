@@ -79,11 +79,16 @@ def create_crime_graph(sector_name):
     numbers = pl
     quantity = pv
 
-    fig = px.pie(sector, values = quantity, names=numbers, title=str(sector_name))
+    fig = px.pie(sector, values = quantity, names=numbers, title=str(sector_name),  color_discrete_sequence=px.colors.qualitative.Pastel2)
     fig.update_layout(
-        font_color="red"
+        font_color= 'rgb(230, 171, 2)'
     )
     fig.show()
+
+
+# top 10 crime cities:
+
+"""
 
 k = []
 
@@ -114,11 +119,7 @@ for i in c.keys():
     if c[i] in g:
         b.append(i)
 
-#print(b) #where most crime happened top 10
-#top10cities = b
 
-for i in c.keys():
-    if c[i] in k:
-        l.append(i)
+"""
 
-print(l)
+print(create_crime_graph("Southwest"))
