@@ -19,7 +19,7 @@ for i in k:
     if i in central_weapons:
         central_weapons[i] += 1
     else:
-        central_weapons[i] = 0
+        central_weapons[i] = 1
 
 # if frequency was less than 10% of overall crime in Central, don't include:
 cweap = {}
